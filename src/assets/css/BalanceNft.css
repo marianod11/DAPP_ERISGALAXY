@@ -1,0 +1,166 @@
+ .card-pool{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+   
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+   margin: 6px;
+   border-radius: 15px;
+   padding: 0;
+}
+
+.text-pool{
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+    height: 150px;
+
+        font-family: 'Rajdhani', sans-serif;
+ 
+ 
+
+}
+.tittle-pool{
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);;
+    font-family: 'Rajdhani', sans-serif;
+}
+.tittle-pool span{
+    bottom: 10px;
+    font-size: 16px;
+    align-items: center;
+    word-break: break-all;
+}
+
+.card-pool-active{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+   
+    box-shadow: 0 0 2px rgba(0, 178, 255, 1), 0 0 4px rgba(0, 178, 255, 1),
+    0 0 6px rgba(0, 178, 255, 1), 0 0 10px rgba(38, 104, 127, 1),
+    0 0 10px rgba(38, 104, 127, 1), 0 0 15px rgba(38, 104, 127, 1),
+    0 0 10px rgba(38, 104, 127, 1), 0 0 10px rgba(38, 104, 127, 1),
+    0 0 20px rgba(38, 104, 127, 1);
+   margin: 26px 0px;
+   padding: 15px 0px;
+   border-radius: 15px;
+}
+
+.container-btn{
+    padding: 4px;
+    height: 150px;
+  
+}
+
+.btn-pool{
+
+    top:10px;
+    border: 1px solid green;
+    padding: 4px;
+    backdrop-filter: blur(10px);
+	
+	height: 50px;
+	width: 200px;
+	
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .3s ease;
+	font: 11px sans-serif;
+	font-weight: 300;
+	text-shadow: 0 0 20px #fff;
+	text-transform: uppercase;
+    text-decoration: none;
+	cursor: pointer;
+    background-image: linear-gradient(to bottom, #2c3e50, rgba(5, 35, 99, 0.87));
+    border-color: rgba(168, 236, 255, 1);
+		background-image: linear-gradient(to bottom, transparentize(gba(48, 138, 255, 1), .5), transparentize(rgba(29, 96, 240, 1), .5));
+		box-shadow: 0 0 70px transparentize(gba(48, 138, 255, 1), .5), 0 5px 20px transparentize(gba(48, 138, 255, 1), .5), inset 0 1px rgba(255, 236, 168, 1), inset 0 -1px rgba(255, 236, 168, 1);
+		color: rgba(168, 236, 255, 1);
+    font-size: 18px;
+}
+
+.btn-pool:before{
+    content: "";
+    display: block;
+    width: calc(100% - 8px);
+    height: calc(50px - 8px);
+    animation: breath 2s infinite alternate;
+    left: 4px;
+    top: 3px;
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #fff;
+  
+    box-shadow: inset 0 0 30px 0 rgba(168, 236, 255, 1)
+
+}
+
+
+.btn-pool2{
+
+    border: 1px solid green;
+    padding: 4px;
+    backdrop-filter: blur(10px);
+	transform: skewX(-10deg);
+	height: 25px;
+    width: 110px;
+	
+
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .3s ease;
+	font:10px sans-serif;
+	font-weight: 300;
+	text-shadow: 0 0 20px #fff;
+	text-transform: uppercase;
+
+	cursor: pointer;
+    background-image: linear-gradient(to bottom, #2c3e50, rgba(5, 35, 99, 0.87));
+    border-color: rgba(168, 236, 255, 1);
+		background-image: linear-gradient(to bottom, transparentize(gba(48, 138, 255, 1), .5), transparentize(rgba(29, 96, 240, 1), .5));
+		box-shadow: 0 0 70px transparentize(gba(48, 138, 255, 1), .5), 0 5px 20px transparentize(gba(48, 138, 255, 1), .5), inset 0 1px rgba(255, 236, 168, 1), inset 0 -1px rgba(255, 236, 168, 1);
+		color: rgba(168, 236, 255, 1)
+    
+}
+
+.btn-pool2:before{
+    content: "";
+    display: block;
+    width: calc(100% - 22px);
+    height: calc(25px - 8px);
+    animation: breath 2s infinite alternate;
+    left: 10px;
+    top: 3px;
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid #fff;
+
+    box-shadow: inset 0 0 30px 0 rgba(168, 236, 255, 1)
+
+}
+
+.nft-item{
+    padding: 0;
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  
+}
+
+.nft-item video{
+    padding: 0;
+    height: 160px;
+    width: 250px;
+}
+

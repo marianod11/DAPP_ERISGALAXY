@@ -1,0 +1,45 @@
+.container{ 
+    padding: 20px;
+    width: 100%;
+    height:100%;
+   
+    
+}
+
+.workers{
+    width: 100%;
+    height:100%;
+    
+}
+
+.robot{
+    margin-left: -380px;
+    width:151.19px;
+    height: 220.47px;
+}
+
+
+
+
+.panel-robot{
+    margin-left: 80px;
+    width:302.39px;
+    height: 181.42px;
+}
+
+.mint{
+    display: flex;
+   justify-content: center;
+}
+
+@media only screen and (max-width: 760px){
+  
+.mint{
+    display: block;
+    text-align: center;
+}
+	
+    
+
+
+}

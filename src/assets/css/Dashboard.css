@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+
+
+
+
+
+.Page-dashboard .tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    paddin-top: 6vh;
+    padding-bottom: 10px;
+    color: rgb(235, 235, 235);
+    text-align: center;
+    text-shadow: 
+       4px 0px 0px rgb(4, 84, 231),
+        -1px 0px 0px rgb(37, 157, 226);
+        font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+    margin: auto; 
+    word-break: break-all;
+    
+}
+
+.tittle-card{
+  color: rgb(var(--text-color));
+  border: 2px double transparent;
+  background-image: linear-gradient(rgba(107, 106, 106, 0.116), rgba(13, 14, 33, 0.007)), radial-gradient(circle at left top,rgba(0, 0, 0, 0.2),  rgba(89, 97, 102, 0.295));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 38px;
+}
+
+
+
+.card-container .card {
+    background: rgba(255, 255, 255, 0.05);
+    color:  rgb(235, 235, 235);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    word-break:break-all;
+        
+}
+.name-card h2{
+    text-shadow: 
+    1px 0px 0px rgb(4, 84, 231),
+    -1px 0px 0px rgb(37, 157, 226);
+}
+
+.card-container h3{
+    font-size:18px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+}
+
+.card-container h4{
+    font-size: 12px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+}
+

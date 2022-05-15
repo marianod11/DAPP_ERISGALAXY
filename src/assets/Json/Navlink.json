@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Dashboard",
+        "path":"/",
+        "key": 1
+    },
+    {
+        "name":"Robot-Workers",
+        "path":"/workers",
+        "key": 2
+    },
+    {
+        "name":"DroidNft",
+       "path":"/DroidNft",
+        "key": 3
+    },
+    {
+        "name":"MarketPlace",
+        "path":"/Marketplace",
+        "key": 4
+    },
+    {
+        "name":"Support",
+        "path":"/Support",
+        "key": 5
+    }
+]

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.bouton{
+	text-transform: uppercase;
+    margin-right: 10px;
+	font-weight: 800;
+	color:BLACK;
+	border-radius: 100px;
+	border: 0px;
+	background-image: linear-gradient(to top, #fdc830, #f37335);
+	height: 35px;
+	width: 200px;
+    transition: box-shadow 0.1s linear;
+    float: right;
+	text-shadow: -3px 1px 2px rgba(0,0,0,0.44);
+}
+.bouton:hover{
+	transition: box-shadow 0.1s linear;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #fff;
+	border-radius: 100px;
+	border: 0px;
+	background-image: linear-gradient(to top, #fdc830, #f37335);
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+}
+.bouton:active{
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #fff;
+	border-radius: 100px;
+	border: 0px;
+	background-image: linear-gradient(to top, #fdc830, #f37335);
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	height: 35px;
+	width: 200px;
+}
+
+
+@media only screen and (max-width: 360px){
+  
+	.bouton{
+		
+		margin-right: 6px;
+		width: 100px;
+		
+		font-size: 12px;
+	}
+    
+
+
+}
