@@ -1,0 +1,11 @@
+{
+    "description": "Robot mas poderoso de la Galaxia", 
+    "image": "https://gateway.pinata.cloud/ipfs/QmUiWvE9HibDBbea38AjZijHKbiZv2EWJfenpNF6MWotiH", 
+    "name": "Robot de Ataque",
+    "attributes": [
+      {
+        "trait_type": "Robot3", 
+        "value": "Robot"
+      }
+    ]
+  }

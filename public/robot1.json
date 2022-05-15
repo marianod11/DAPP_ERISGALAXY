@@ -1,0 +1,11 @@
+{
+    "description": "Robot mas Defensivo de la Galaxia", 
+    "image": "https://gateway.pinata.cloud/ipfs/QmYpj1c6tuvmiBDJH56c5JWgutE73k2NF35o3N2KCVGgPm", 
+    "name": "Robot de Defensa",
+    "attributes": [
+      {
+        "trait_type": "Robot1", 
+        "value": "Robot"
+      }
+    ]
+  }

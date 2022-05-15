@@ -1,0 +1,11 @@
+{
+    "description": "Robot mas ingenioso de la Galaxia", 
+    "image": "https://gateway.pinata.cloud/ipfs/QmUKnMstn71xgbmTmW3YiaXnSDamhZcSxMzGQTVUaWXxzn", 
+    "name": "Robot de Planificacion",
+    "attributes": [
+      {
+        "trait_type": "Robot2", 
+        "value": "Robot"
+      }
+    ]
+  }
