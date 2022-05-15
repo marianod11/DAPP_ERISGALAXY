@@ -1,0 +1,11 @@
+{
+    "description": "robot y31", 
+    "image": "https://gateway.pinata.cloud/ipfs/QmZVWpyztMpmvXw9UkvAMbvGAajSBJg7R8SU8CEBr1zPCK", 
+    "name": "y31",
+    "attributes": [
+      {
+        "trait_type": "Robot3", 
+        "value": "Robot"
+      }
+    ]
+  }

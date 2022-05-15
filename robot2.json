@@ -1,0 +1,11 @@
+{
+    "description": "robot a29", 
+    "image": "https://gateway.pinata.cloud/ipfs/QmVxmEZUPKHYPJjH9QVEtECe5nz9GzEv6zTJk3sADtGziJ", 
+    "name": "a29",
+    "attributes": [
+      {
+        "trait_type": "Robot3", 
+        "value": "Robot"
+      }
+    ]
+  }
