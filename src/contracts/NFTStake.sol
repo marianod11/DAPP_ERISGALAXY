@@ -14,22 +14,7 @@ import "../lib/@openzeppelin/contracts/access/Pausable.sol";
 
 
 pragma solidity ^0.8.0;
-// NFT Staking pools
 
-
-/*
-ESTE CONTRATO CREA PISCINAS DE ACUERDO NFT CON RECOMPENSAS FIJAS. LAS RECOMPENSAS SE BASAN EN CICLOS Y SE PUEDEN IMPLEMENTAR MULTIPLICADORES.
--CREAR PISCINA REQUIERE CONTRATO NFT Y CONTRATO TOKEN ERC20 COMO ARGUMENTOS
--EL CONTRATO NFT DEBE SER ERC721
--CADA PISCINA TIENE CICLO Y CICLO MÁXIMO. POR EJEMPLO, UNA PISCINA PUEDE RECOMPENSAR 20 TOKENS CADA 8 HORAS Y MÁXIMO 5 VECES.
--EL USUARIO PUEDE RECLAMAR UNO POR UNO O MÚLTIPLES NFTS A LA VEZ, SE GUARDARÁN LOS RECLAMOS RESANINADOS.
--NO SE PUEDE RETIRAR UN NFT DE NUEVO SI SE RECLAMA LA CANTIDAD MÁXIMA DEL CICLO, POR EJEMPLO, SI RECLAMAS TU RECOMPENSA DE 10 CICLOS Y EL PISCINA TIENE EL LÍMITE DE 10 CICLOS, NO PUEDES RECIBIR ESE NFT MÁS.
--Puede crearse una cantidad infinita de parejas.
--MULTIPLICADOR DE RECOMPENSAS POR PARTE DEL FIRMADOR DE LA PISCINA
-
-
-implentar multiplicador 
-*/
 
  contract NFTStake is Ownable, ERC165Storage,Pausable {
     using Strings for uint256;
@@ -51,18 +36,15 @@ implentar multiplicador
 
     uint256 public currentPoolId = 0;
  
-    // pool id => pool
+    
     mapping(uint256 => NFTPool) public Pools;
 
-    // recompensas restantes del grupo
+    
     mapping(uint256 => uint256) public ClaimedPoolRewards;
 
-    // pool id => tokenId => stake
+    
     mapping(uint256 => mapping(uint256 => Stake)) public Stakes;
 
-    // mapping of active staking count by wallet.
-    //poolid => address =>  active stake count. will be used with pool parameter: maxStakePerWallet
-    //poolid => address =>  active staked tokenids count.
     mapping(uint256 => mapping(address => uint256)) public ActiveStakes;
     mapping(uint256 => mapping(address => EnumerableSet.UintSet)) private CurrentStakedTokens;
 
@@ -158,10 +140,10 @@ implentar multiplicador
         require(Pools[pid].rewardSupply >= ClaimedPoolRewards[pid] && Pools[pid].endingDate > block.timestamp, "pool tenga dinero aun!!!!! q no esta vacio");
         require(ActiveStakes[pid][msg.sender] <= Pools[pid].maxStakePerWallet, "YA APUESTA MAX. CANTIDAD DE NFT EN ESTA PISCINA");
         require(tokenIds.length <= Pools[pid].maxStakePerWallet, "YA APUESTA MAX. CANTIDAD DE NFT EN ESTA PISCINA..");
-        // transfer NFTs to contract
+      
         uint256 poolMaxCycle = Pools[pid].maxCycles;
         for (uint256 i = 0; i < tokenIds.length; i++) {
-            // comprobar si el token se aplicó antes
+        
             require(Stakes[pid][tokenIds[i]].lastCycle < poolMaxCycle, "Ya no puedo apostar");
             require(Stakes[pid][tokenIds[i]].isActive == false, "NFT ya apostado. ?!?!?");
          
@@ -180,8 +162,7 @@ implentar multiplicador
             Stakes[pid][tokenIds[i]] = newStake;
             ActiveStakes[pid][msg.sender] += 1;
             CurrentStakedTokens[pid][msg.sender].add(tokenIds[i]);
-            // bytes32 method = keccak256("transferFrom");
-            // bytes4(keccak256(bytes('transferFrom(address,address,uint256)')));
+   
             (bool success,) = address(Pools[pid].nftContract).call(abi.encodeWithSelector(0x23b872dd, msg.sender, address(this), tokenIds[i]));
             require(success, "CANNOT TRANSFER NFT");
             // create stakes for each booltranfer=buscarerc721
@@ -191,8 +172,7 @@ implentar multiplicador
 
         emit Staked(pid, tokenIds);
     }
-    // @param multiplierParams is array of uint256s, first param is multiplier, second one is timestamp, rest is token ids to claim.
-    // @param multiplierParams hash must be signed by pool signer.
+ 
     function leaveStaking(uint256 pid, uint256[] memory tokenIds) external whenNotPausedStake {
        uint256 poolMaxCycle = Pools[pid].maxCycles;
         uint256 _total = 0;
@@ -239,7 +219,6 @@ implentar multiplicador
 
 
     function claimRewards(uint256 pid, uint256[] memory tokenIds) external {
-        //        require(block.timestamp < Pools[pid].endingDate, "Pool is expired");
         uint256 poolMaxCycle = Pools[pid].maxCycles;
         uint256 _total = 0;
         for (uint256 i = 0; i < tokenIds.length; i++) {
@@ -279,7 +258,6 @@ implentar multiplicador
     }
 
     function _claim(uint256 pid, uint256 tokenId, uint256 toBeClaimed, uint256 currentCycleCount) internal {
-        // increase amount and cycle count for that nft, prevent someone else buying it and staking again
         Stakes[pid][tokenId].claimedTokens += toBeClaimed;
         Stakes[pid][tokenId].lastCycle = Stakes[pid][tokenId].lastCycle + currentCycleCount;
         ClaimedPoolRewards[pid] += toBeClaimed;
